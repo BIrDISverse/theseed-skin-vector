@@ -261,7 +261,6 @@ if (process.browser) {
         require("./static/js/bootstrap.min.js");
         require("./static/js/collapsibleTabs.js");
         require("./static/js/vector.js");
-        require("./static/js/theseed.js");
     } catch(e) {}
 }
 export default {
