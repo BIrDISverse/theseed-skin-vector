@@ -55,7 +55,7 @@
                             <nuxt-link :to="contribution_ip_link($store.state.session.ip)" title="이 IP 주소의 편집 목록 [Alt+Shift+y]" accesskey="y">기여</nuxt-link>
                         </li>
                         <li id="pt-createaccount">
-                            <nuxt-link :to="{path:'/member/signup',query:{redirect:$route.fullPath}}" title="계정을 만들고 로그인하는 것이 좋습니다; 하지만, 필수는 아닙니다">계정 만들기</nuxt-link>
+                            <nuxt-link to="/member/signup" title="계정을 만들고 로그인하는 것이 좋습니다; 하지만, 필수는 아닙니다">계정 만들기</nuxt-link>
                         </li>
                         <li id="pt-login">
                             <nuxt-link :to="{path:'/member/login',query:{redirect:$route.fullPath}}" :title="$store.state.config['wiki.site_name'] + '에 로그인하면 여러가지 편리한 기능을 사용할 수 있습니다. [Alt+Shift+o]'" accesskey="y">로그인</nuxt-link>
