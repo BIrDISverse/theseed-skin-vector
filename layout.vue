@@ -150,12 +150,7 @@
                         <h3>
                             <label for="searchInput">검색</label>
                         </h3>
-                        <form id="searchform">
-                            <div id="simpleSearch">
-                                <input name="search" :placeholder="$store.state.config['wiki.site_name'] + ' 검색'" :title="$store.state.config['wiki.site_name'] + '검색 [Alt+Shift+f]'" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"
-                                    type="search">
-                                <input name="go" value="보기" title="이 이름의 문서가 존재하면 그 문서로 바로 가기" id="searchButton" class="searchButton" type="submit"> </div>
-                        </form>
+                        <search-form />
                     </div>
                 </div>
             </div>
@@ -256,6 +251,7 @@
 <script>
 import Common from '~/mixins/common';
 import LocalDate from '~/components/localDate';
+import searchForm from './components/searchForm';
 
 if (process.browser) {
     try {
@@ -271,7 +267,8 @@ if (process.browser) {
 export default {
     mixins: [Common],
     components: {
-        LocalDate
+        LocalDate,
+        searchForm
     },
     computed: {
         logoUrl: this.$store.state.config['wiki.logo_url'] ? `url(${this.$store.state.config['wiki.logo_url']})`: `url(${require('./static/images/wiki-logo.svg')})`
