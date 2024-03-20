@@ -235,6 +235,7 @@
                 </ul>
             </div>
         </div>
+        <setting />
     </div>
 </template>
 
@@ -251,6 +252,7 @@
 <script>
 import Common from '~/mixins/common';
 import LocalDate from '~/components/localDate';
+import Setting from '~/components/setting';
 import searchForm from './components/searchForm';
 
 if (process.browser) {
@@ -267,6 +269,7 @@ export default {
     mixins: [Common],
     components: {
         LocalDate,
+        Setting,
         searchForm
     },
     computed: {

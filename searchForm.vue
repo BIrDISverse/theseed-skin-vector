@@ -1,10 +1,10 @@
 <template>
-    <form id="searchform" class="form-inline" v-on:submit.prevent>
+    <form @submit.prevent id="searchform" class="form-inline">
         <div id="simpleSearch">
             <input name="search" :placeholder="$store.state.config['wiki.site_name'] + ' 검색'" :title="$store.state.config['wiki.site_name'] + '검색 [Alt+Shift+f]'" accesskey="f" id="searchInput" tabindex="1" autocomplete="off" type="search" v-on:input="searchText = $event.target.value" v-model="searchTextModel" @blur="blur" @focus="focus" @input="inputChange" @keydown.enter="keyEnter" @keydown.tab="keyEnter" @keydown.up="keyUp" @keydown.down="keyDown">
             <input @click="onClickSearchButton" name="go" value="보기" title="이 이름의 문서가 존재하면 그 문서로 바로 가기" id="searchButton" class="searchButton" type="submit">
             <div v-if="show" class="v-autocomplete-list">
-                <div class="v-autocomplete-list-item" v-for="(item, i) in internalItems" @click="onClickItem(item)" v-bind:key="i" :class="{'v-autocomplete-item-active': i === cursor}" @mouseover="cursor = i">
+                <div class="v-autocomplete-list-item" v-for="(item, i) in internalItems" @click="onClickItem(item)" :key="i" :class="{'v-autocomplete-item-active': i === cursor}" @mouseover="cursor = i">
                     <div>{{ item }}</div>
                 </div>
             </div>
