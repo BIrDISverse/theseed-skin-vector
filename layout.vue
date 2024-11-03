@@ -253,7 +253,7 @@
 import Common from '~/mixins/common';
 import LocalDate from '~/components/localDate';
 import Setting from '~/components/setting';
-import searchForm from './components/searchForm';
+import searchForm from './searchForm';
 
 if (process.browser) {
     try {
