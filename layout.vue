@@ -221,7 +221,7 @@
             <div id="footer" role="contentinfo">
                 <ul v-if="$store.state.page.viewName === 'wiki' && $store.state.page.data.date" id="footer-info">
                     <li id="footer-info-lastmod">이 문서는 <local-date :date="$store.state.page.data.date" />에 마지막으로 편집되었습니다.</li>
-                    <li id="footer-info-copyright">{{ $store.state.config['wiki.copyright_text'] }}</li>
+                    <li id="footer-info-copyright">{{ $store.state.page.data.copyright_text }}</li>
                 </ul>
                 <ul id="footer-places">
                     <li>
