@@ -230,7 +230,7 @@
                 </ul>
                 <ul id="footer-icons" class="noprint">
                     <li id="footer-poweredbyico">
-                        <a href="//theseed.io/">Powered by the seed Engine</a>
+                        <a href="//theseed.io/">Powered by the tree Engine</a>
                     </li>
                 </ul>
             </div>
